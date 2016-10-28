@@ -1,13 +1,20 @@
 
 ## Compiling From Sources
 
+### Requirements
+
+**For ubuntu 16.04**
+      apt install autoconf libtool-bin
+
+**For fedora 24 and centos 7.2**
+      yum install autoconf libtool automake make
+
 ### Configure
 
 Configure with the default settings:
 
     test -f configure || autoreconf -iv
     ./configure
-    make
 
 Configure with non-standard settings:
 
@@ -33,7 +40,7 @@ Ensure asn1c is still behaving well after compiling on your platform:
 Install the compiler into a standard location:
 
     make install
-    # Use ./configure --prefix to override install location.
+    # Use ./configure --prefix /new/path to override install location.
 
 Display the `asn1c` manual page:
 
